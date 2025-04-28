@@ -46,11 +46,3 @@ This project implements a basic user authorization system in Python. It allows u
 *   **Salt:** For enhanced security, consider adding a salt to the password before encryption.
 *   **File Permissions:** Set appropriate file permissions on `password.txt` and `key.key` to prevent unauthorized access.
 * **main.py:** The `main.py` file is not provided, so it is assumed that it exists and is responsible for key generation and user creation.
-## Future Improvements
-*   **User Management:** Implement functions to add, delete, and modify user accounts.
-*   **Password Complexity Enforcement:** Add rules to ensure users choose strong passwords.
-*   **Salting:** Add salting to the password hashing process.
-*   **Error Handling:** Implement more robust error handling for file operations and other potential issues.
-*   **Logging:** Add logging to track login attempts and other events.
-* **More secure key storage:** Consider using environment variables or a dedicated key management system.
-* **Hashing:** Consider using a hashing algorithm like bcrypt instead of encryption for storing passwords.
