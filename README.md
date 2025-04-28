@@ -12,11 +12,6 @@ This project implements a basic user authorization system in Python. It allows u
     ```bash
     pip install cryptography
     ```
-## Project Structure
-*   **`authorization.py`:** Contains the main logic for user authorization.
-*   **`main.py`:** (Assumed to exist, based on `from main import load_key`) This file is expected to contain the `load_key()` function, which is responsible for loading the encryption key.
-*   **`password.txt`:** This file stores the usernames and encrypted passwords. Each line should be in the format: `username | encrypted_password`.
-* **`key.key`:** (Assumed to be created by `main.py`) This file stores the encryption key.
 ## How It Works
 1.  **Key Generation (in `main.py`):**
     *   The `main.py` file (not provided, but inferred) is expected to generate a unique encryption key using `Fernet.generate_key()`.
