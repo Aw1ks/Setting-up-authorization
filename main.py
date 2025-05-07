@@ -22,17 +22,13 @@ def add(login, password, fernet):
     with open('password.txt', 'a') as password_file:
         password_file.write(f'{login} | {encrypt_password.decode()}\n')
 
-    return login, encrypt_password.decode()
-
 
 def view(fernet):
     with open('password.txt', 'r') as password_file:
         for line in password_file.readlines():
-            login, password = line.strip().split(' | ')
+            login, password = line.rstrip().split(' | ')
             decrypt_password = fernet.decrypt(password.encode()).decode()
             print(f'Логин: {login} | Пароль: {decrypt_password}')
-
-    return login, decrypt_password
 
 
 def main():
