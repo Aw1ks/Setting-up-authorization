@@ -14,7 +14,9 @@ def load_key():
     return my_key
 
 
-def add(login, password, fernet):
+def add(fernet):
+    login = input('Введите логин: ')
+    password = input('Введите пароль: ')
     encrypt_password = fernet.encrypt(password.encode())
     with open('password.txt', 'a') as password_file:
         password_file.write(f'{login} | {encrypt_password.decode()}\n')
@@ -47,9 +49,7 @@ def main():
         if user__response == '1':
             view(fernet)
         elif user__response == '2':
-            login = input('Введите логин: ')
-            password = input('Введите пароль: ')
-            add(login, password, fernet)        
+            add(fernet)        
         elif user__response == '3':
             break
         else:
